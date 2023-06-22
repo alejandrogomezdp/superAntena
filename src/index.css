@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.785rem;
+  --blue: #0d6efd;
+  --blue-hover: #0b5ed7;
+  --blue-shadow: rgba(13, 110, 253, 0.25);
+  --blue-shadow-hover: rgba(11, 94, 215, 0.25);
+  --blue-shadow-focus: rgba(13, 110, 253, 0.5);
+  --light-blue: #bee5e3;
+  --light-blue-hover: #a8d8d6;
+  --medium-blue: #2980b9;
+  --pink: #d63384;
+  --red: #dc3545;
+  --red-hover: #bd2130;
+  --red-text: #f8d7da;
+  --red-border: rgb(114, 28, 36, 0.25);
+  --yellow: #ffc107;
+  --yellow-hover: #e0a800;
+  --green: #198754;
+  --green-hover: #117a4b;
+  --dark: #292a2b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+,
+::after,
+::before {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ /* Functions and mixins / */
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
 }
