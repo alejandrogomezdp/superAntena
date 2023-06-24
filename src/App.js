@@ -3,25 +3,29 @@ import './Componentes/Componente1';
 import BarraDeBusqueda from './Componentes/Componente1';
 import Producto from './Componentes/Componente2';
 import productosData from './Db/db.js';
+import menuItems from './Componentes/Compontente3';
+import DropdownMenu from './Componentes/Compontente3';
 
-function App() {
+const App = () => {
   return (
     <>
       <div>
-        <BarraDeBusqueda />
-      </div>
-      {/* // Aquí va el código JSX */}
-      <div>
+
+        <>
+          <DropdownMenu />
+          <BarraDeBusqueda />
+          {/* Aquí va el código JSX */}
+        </>
+      </div><div>
         {productosData.map((producto) => (
           <Producto
             key={producto.Id}
-            id={producto.Id}
+            id={producto['Ref.']}
             producto={producto.Producto}
             resumen={producto.Resumen}
-            precio={producto.Precio}
-          />
-        ))}
+            precio={producto.Precio} />))}
       </div>
+        ););}
     </>
   );
 }

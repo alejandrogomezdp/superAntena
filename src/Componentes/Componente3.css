@@ -1,0 +1,51 @@
+.menu {
+max-width: 8em;
+  font-family:  Roboto, sans-serif;
+  font-size: x-large
+
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-category {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.menu-category:hover {
+  max-width: fit-content;
+  /* padding-left: 5em; */
+}
+
+.menu-subcategory {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: none;  /* Initially hide all subcategory items */
+  padding-left: 5em;
+}
+
+.menu-category:hover .menu-subcategory {
+  display: block;  /* Show subcategory items when hovering over the category */
+}
+
+.menu-item {
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #bbb;
+  display: none;  /* Initially hide all menu items */
+}
+
+.menu-subcategory:hover .menu-item {
+  display: block;  /* Show menu items when hovering over the subcategory */
+}
+
+.menu-item:hover {
+}
