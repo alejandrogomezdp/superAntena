@@ -1,25 +1,24 @@
 import './App.css';
-import './Componentes/Componente1';
 import BarraDeBusqueda from './Componentes/Componente1';
-import Producto from './Componentes/Componente2';
-import productosData from './Db/db.js';
+import productosData from './Componentes/superantena_db';
 
-function App() {
+function App (){
   return (
     <>
       <div>
         <BarraDeBusqueda />
       </div>
-      {/* // Aquí va el código JSX */}
-      <div>
-        {productosData.map((producto) => (
-          <Producto
-            key={producto.Id}
-            id={producto.Id}
-            producto={producto.Producto}
-            resumen={producto.Resumen}
-            precio={producto.Precio}
-          />
+      {/* Aquí va el código JSX */}
+      <div className="producto-container">
+        {productosData.map(producto => (
+          <div key={producto.IdProducto} className="producto-card">
+            <img src={producto.IdProducto} alt={producto.Cabecera} className="producto-img" />
+            <h2 className="producto-titulo">{producto.Cabecera}</h2>
+            <p className="producto-resumen">{producto.Resumen}</p>
+            <p className="producto-precio">{producto.Precio}</p>
+            <button className='botonComprar'>Compra</button>
+
+          </div>
         ))}
       </div>
     </>
@@ -27,3 +26,4 @@ function App() {
 }
 
 export default App;
+

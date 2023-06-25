@@ -10,7 +10,7 @@ function Producto({ id, img, producto, resumen, precio }) {
        </h2>
       <div className=''>
         <p>{img}</p>
-      <p>Resumen:Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s {resumen}</p>
+      <p>Resumen:{resumen}</p>
         <button className='botonComprar'>Compra</button>
        <p>Precio: {precio}</p>
       </div>

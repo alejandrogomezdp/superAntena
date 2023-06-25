@@ -32,3 +32,63 @@
 body{
     font-family: Yantramanav, sans-serif;
 }
+
+/* App.css */
+
+/* Estilos para la barra de búsqueda */
+/* (Estos son genéricos, añade tus propios estilos según el diseño de tu barra de búsqueda) */
+.barra-busqueda {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de los productos */
+.producto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos para cada tarjeta de producto */
+.producto-card {
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.07);
+}
+
+.producto-card:hover {
+  box-shadow: 0 8px 15px 0 hsla(0, 0%, 0%, 0.1);
+  transform: scale(1.03);
+}
+
+.producto-img {
+  width: 100%;
+  height: auto;
+}
+
+.producto-titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.producto-resumen {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.producto-precio {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
