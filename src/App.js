@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import BarraDeBusqueda from './Componentes/Componente1';
 import productosData from './Componentes/superantena_db';
@@ -6,11 +7,11 @@ import Calculadora from './Calculadora.js';
 
 const App = () => { 
   return (
-    <>
-      <div>
+        // <>
+    <div>
         <Calculadora />
+    {/* </> */}
       </div>
-    </>
   );
 }
 
