@@ -11,8 +11,8 @@ function Producto({ id, img, producto, resumen, precio }) {
       <div className=''>
         <p>{img}</p>
       <p>Resumen:{resumen}</p>
-        <button className='botonComprar'>Compra</button>
        <p>Precio: {precio}</p>
+       <button className='botonComprar'>Añadir</button>
       </div>
     </div>
     </>

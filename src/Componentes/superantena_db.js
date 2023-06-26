@@ -13,6 +13,6 @@ const productosData = [
         "Cabecera": "Grabador IP 4CH 8Mpx PoE",
         "Precio": 25733
     }    
-    ]
+    ];
 
 export default productosData;
