@@ -169,10 +169,8 @@ image{
 }
 
 img{
-  width: 30%;
-  height: 30%;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 img.image{
@@ -188,8 +186,6 @@ h1{
 }
 
 svg{
-  width: 2em;
-  height: 2em;
   margin-top: 0.5em;
 }
 
@@ -207,5 +203,4 @@ svg{
 }
 
 img.Logo{
-  max-height: 200px;
 }

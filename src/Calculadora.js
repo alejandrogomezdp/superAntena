@@ -5,6 +5,7 @@ import { FaShoppingCart, FaArrowRight, FaArrowLeft, FaTrashAlt } from 'react-ico
 import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 
+
 Modal.setAppElement('#root'); // Este código es necesario para la accesibilidad
 
 const ComponenteCalculadora = () => {
@@ -48,12 +49,12 @@ const ComponenteCalculadora = () => {
 
   return (
     <div className="container">
-      <img src="	https://www.superantena.es/img/super-logo-1592402347.jpg" alt=""/>
+      <img src="	https://www.superantena.es/img/super-logo-1592402347.jpg" alt="" style={{width: '250px', height: '100px'}}/>
       <h1>Calculadora</h1>
       <div className="slider">
-        <FaArrowLeft style={{color:'25afdd'}} onClick={() => cambiarCategoria("izquierda")} />
-        <img src={imagenActual} alt="SliderImagen" />
-        <FaArrowRight style={{color:'25afdd'}} onClick={() => cambiarCategoria("derecha")} />
+        <FaArrowLeft style={{color:'25afdd'}} onClick={() => cambiarCategoria("izquierda")} style={{width: '50px', height: '50px',color: '#25afdd'}} />
+        <img src={imagenActual} alt="SliderImagen" style={{width: '200px', height: '200px'}} />
+        <FaArrowRight style={{color:'25afdd'}} onClick={() => cambiarCategoria("derecha")} style={{width: '50px', height: '50px',color: '#25afdd'}}/>
       </div>
       
       {dataProductos.filter(producto => producto.Categoria === categoria).map(producto => (
