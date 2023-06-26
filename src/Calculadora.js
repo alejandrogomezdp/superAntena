@@ -13,9 +13,15 @@ const ComponenteCalculadora = () => {
   const calcularTotal = () => {
     return carrito.reduce((acc, producto) => acc + producto.Precio, 0);
   };
-
+  
   return (
     <div className="container">
+      <img src="http://www.ea7gt.com/web/images/antena_logo.png" alt="Logo" style={{width: "100px", height: "100px"}}></img>
+      <h1>Calculadora de precios</h1>
+      <div style={{width: "200px", height: "200px", padding: "2em 2em 2em 2em", margin:"auto",}}>
+      <img src="https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg" alt="SliderImagen"></img>
+
+      </div>
       
       {dataProductos.map(producto => (
         <div className="nested" key={producto.Id}>
@@ -47,7 +53,7 @@ const ComponenteCalculadora = () => {
         </div>
       ))}
       <div className="carrito">
-        <FaShoppingCart size="3em" color="green" />
+        <FaShoppingCart size="3em" color="#2c5da6" />
         <span>{carrito.length}</span>
         <span>{calcularTotal()}€</span>
       </div>

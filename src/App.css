@@ -29,8 +29,14 @@
   box-sizing: inherit;
 }
 
+h1, h2, h3{
+    font-family: Open Sans, sans-serif;
+    font-weight: 300;
+}
+
 body{
     font-family: Yantramanav, sans-serif;
+    font-weight: 300;
 }
 
 button.botonComprar {
