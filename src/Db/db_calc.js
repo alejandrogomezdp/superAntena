@@ -1,16 +1,28 @@
 const dataProductos = [
 
     {
-        "Id": 1,
+        "Id": "0001",
         "Img": ("https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg"),
-        "Precio": 25733,
-        "PrecioSinIva": "2573"
+        "Precio": 2,
+        "PrecioSinIva": "1,5"
     },
     {
-        "Id": 2,
+        "Id": "0002",
         "Img": ("https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg"),
-        "Precio": 63793,
+        "Precio": 2,
         "PrecioSinIva": "6379"
+    },
+    {
+        "Id": "0003",
+        "Img": ("https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg"),
+        "Precio": 3,
+        "PrecioSinIva": "2,15"
+    },
+    {
+        "Id": "0004",
+        "Img": ("https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg"),
+        "Precio": 4,
+        "PrecioSinIva": "3"
     },
 
 ];

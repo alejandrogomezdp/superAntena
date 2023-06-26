@@ -16,11 +16,7 @@ const ComponenteCalculadora = () => {
 
   return (
     <div className="container">
-      <div className="carrito">
-        <FaShoppingCart size="1.5em" />
-        <span>{carrito.length}</span>
-        <span>{calcularTotal()}€</span>
-      </div>
+      
       {dataProductos.map(producto => (
         <div className="nested" key={producto.Id}>
           <div className="text-right line-height">
@@ -50,6 +46,11 @@ const ComponenteCalculadora = () => {
           </div>
         </div>
       ))}
+      <div className="carrito">
+        <FaShoppingCart size="3em" color="green" />
+        <span>{carrito.length}</span>
+        <span>{calcularTotal()}€</span>
+      </div>
     </div>
   );
 };

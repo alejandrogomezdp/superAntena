@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.logo{
+  margin: auto;
+}
+
 .nested {
   margin-right: -15px;
   margin-left: -15px;
@@ -147,4 +151,30 @@ align-items: center;
 image{
   min-width: 50px;
   min-height: 50px;
+}
+
+.carrito{
+  text-align: center;
+  font-size: large;
+  margin-top: 1em;
+
+}
+
+svg{
+  width: 2em;
+  height: 2em;
+  margin-top: 0.5em;
+}
+
+.totalpedido{
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.total{
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 1em;
+  color: rgb(5, 122, 255);
 }
