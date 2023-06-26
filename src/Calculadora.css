@@ -61,15 +61,16 @@ align-items: middle;
 }
 
 .price-big {
-  font-size: 18px;
-  color: #2C5DA6;
+  font-size: 2em;
+  color: #25AFDD;
   text-align: right;
   font-weight: 700;
+  padding-left: .5em;
 }
 
 .price-small, .delivery-info {
   color: rgb(153, 153, 153);
-  font-size: 11px;
+  font-size: 1.5em;
 }
 
 .delivery-info {
@@ -115,15 +116,15 @@ align-items: middle;
   color: rgb(85, 85, 85);
   background-color: rgb(255, 255, 255);
   background-image: none;
-  box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0) 0px 1px 1px 0px inset;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   font-family: Nunito, sans-serif;
   margin: 0px;
 }
 
 .button {
-  background-color: #2C5DA6;
-  border-color: #2C5DA6;
+  background-color: #25AFDD;
+  border-color: #25AFDD;
   border-radius: 0px 0px 0px 4px;
   max-height: 30px;
   width: 100%;
@@ -149,9 +150,15 @@ align-items: center;
   margin: 0px;
 }
 
+.SliderImagen{
+  width: 50px;
+  height: 50px;
+  padding-bottom: 2em;
+}
+
 image{
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .carrito{
@@ -159,6 +166,25 @@ image{
   font-size: large;
   margin-top: 1em;
 
+}
+
+img{
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+img.image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h1{
+  color: #25AFDD;
+  padding: 1em 0em 1em 0em;
 }
 
 svg{
@@ -177,7 +203,7 @@ svg{
   text-align: center;
   font-size: 1.5em;
   margin-top: 1em;
-  color: rgb(5, 122, 255);
+  color: #25AFDD);
 }
 
 img.Logo{

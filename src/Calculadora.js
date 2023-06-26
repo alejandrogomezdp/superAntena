@@ -1,29 +1,62 @@
-import React, { useState } from 'react';
-import dataProductos from './Db/db_calc';
+import React, { useState, useEffect } from 'react';
+import dataProductos from './Db/db_calc copy';
 import './Calculadora.css'; 
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaArrowRight, FaArrowLeft, FaTrashAlt } from 'react-icons/fa';
+import Modal from 'react-modal';
+import { Button } from 'react-bootstrap';
+
+Modal.setAppElement('#root'); // Este código es necesario para la accesibilidad
 
 const ComponenteCalculadora = () => {
   const [carrito, setCarrito] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [categoria, setCategoria] = useState("Categoría 1");
+  const [imagenActual, setImagenActual] = useState("https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg");
+  const categorias = ["Categoría 1", "Categoría 2"];
+
+  useEffect(() => {
+    const primerProductoDeCategoria = dataProductos.find(producto => producto.Categoria === categoria);
+    if (primerProductoDeCategoria) {
+        setImagenActual(primerProductoDeCategoria.Img);
+    }
+  }, [categoria]);
 
   const añadirAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
+    setCarrito(prevCarrito => {
+      const exists = prevCarrito.find(item => item.Id === producto.Id);
+
+      if (exists) {
+        return prevCarrito.map(item =>
+          item.Id === producto.Id ? { ...item, cantidad: item.cantidad + 1 } : item
+        );
+      } else {
+        return [...prevCarrito, { ...producto, cantidad: 1 }];
+      }
+    });
   };
 
-  const calcularTotal = () => {
-    return carrito.reduce((acc, producto) => acc + producto.Precio, 0);
-  };
-  
+  const cambiarCategoria = (direccion) => {
+    const indexActual = categorias.indexOf(categoria);
+    if (direccion === "izquierda" && indexActual > 0) {
+      setCategoria(categorias[indexActual - 1]);
+    } else if (direccion === "derecha" && indexActual < categorias.length - 1) {
+      setCategoria(categorias[indexActual + 1]);
+    }
+  }
+
+  // ...resto del código...
+
   return (
     <div className="container">
-      <img src="http://www.ea7gt.com/web/images/antena_logo.png" alt="Logo" style={{width: "100px", height: "100px"}}></img>
-      <h1>Calculadora de precios</h1>
-      <div style={{width: "200px", height: "200px", padding: "2em 2em 2em 2em", margin:"auto",}}>
-      <img src="https://www.ilumitec.es/imagenes/mini/marco-blanco-blanco-simon-82.jpg" alt="SliderImagen"></img>
-
+      <img src="	https://www.superantena.es/img/super-logo-1592402347.jpg" alt=""/>
+      <h1>Calculadora</h1>
+      <div className="slider">
+        <FaArrowLeft style={{color:'25afdd'}} onClick={() => cambiarCategoria("izquierda")} />
+        <img src={imagenActual} alt="SliderImagen" />
+        <FaArrowRight style={{color:'25afdd'}} onClick={() => cambiarCategoria("derecha")} />
       </div>
       
-      {dataProductos.map(producto => (
+      {dataProductos.filter(producto => producto.Categoria === categoria).map(producto => (
         <div className="nested" key={producto.Id}>
           <div className="text-right line-height">
             <div className="box">
@@ -52,11 +85,6 @@ const ComponenteCalculadora = () => {
           </div>
         </div>
       ))}
-      <div className="carrito">
-        <FaShoppingCart size="3em" color="#2c5da6" />
-        <span>{carrito.length}</span>
-        <span>{calcularTotal()}€</span>
-      </div>
     </div>
   );
 };
