@@ -55,7 +55,6 @@ const dataProductos = [
         "PrecioSinIva": "3",
         "Categoria": "Categoría 2"
     },
-    
 ];
 
 export default dataProductos;
