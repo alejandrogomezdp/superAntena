@@ -140,16 +140,19 @@ align-items: middle;
   height: auto;
   justify-content: center;
   line-height: 1.5;
-  padding: 6px 20px;
+padding: 1em 1em 1em 1em;
   position: relative;
   text-align: center;
   text-decoration: none;
   transition: background-color .2s,background-position .2s;
   user-select: none;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
+  margin: auto;
+  align-items: center;
+   ;
 }
 
 button:active,
@@ -163,20 +166,21 @@ button:hover {
 
 .button-21:focus:not(:active) {
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+  
 }
 
 
 .SliderImagen{
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   padding-bottom: 2em;
 }
 
 .carrito{
   text-align: center;
   font-size: large;
-  margin-top: 1em;
   margin: auto;
+  align-items: center;
 
 }
 
@@ -187,8 +191,8 @@ p{
 }
 
 img.image{
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -215,15 +219,24 @@ svg{
   color: #25AFDD);
 }
 
+.button.btn.btn-primary {
+  background-color: #25AFDD;
+  border-color: #25AFDD;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
  
 
 
 @media max-width; 800px {
   p{
     
-    font-size: 2em
+    font-size: 2em;
   }
 
-
+  .plusalcarrito {
+    background-color: #25AFDD;
+    border-color: #25AFDD;
+     }
   
 }

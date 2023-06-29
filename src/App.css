@@ -139,7 +139,12 @@ transform: scale(1.05) rotate(-1deg);
 }
 
 img{
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 75%;
+  max-height: 75%;
 } 
 
+.plusalcarrito{
+  
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

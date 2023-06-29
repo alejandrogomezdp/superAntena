@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import dataProductos from './Db/superantena';
 import './Calculadora.css'; 
-import { FaShoppingCart, FaArrowRight, FaArrowLeft, FaTrashAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaArrowRight, FaArrowLeft, FaTrashAlt, FaPlus, FaMinus } from 'react-icons/fa';
 import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 
@@ -35,6 +35,22 @@ const ComponenteCalculadora = () => {
     });
   };
 
+  const incrementarCantidad = (productoId) => {
+    setCarrito(prevCarrito =>
+      prevCarrito.map(item =>
+        item.Id === productoId ? { ...item, cantidad: item.cantidad + 1 } : item
+      )
+    );
+  };
+
+  const decrementarCantidad = (productoId) => {
+    setCarrito(prevCarrito =>
+      prevCarrito.map(item =>
+        item.Id === productoId && item.cantidad > 0 ? { ...item, cantidad: item.cantidad - 1 } : item
+      )
+    );
+  };
+
   const eliminarDelCarrito = (productoId) => {
     setCarrito(prevCarrito => prevCarrito.filter(item => item.Id !== productoId));
   };
@@ -65,19 +81,24 @@ const ComponenteCalculadora = () => {
       <div className="productos">
         {dataProductos.filter(producto => producto.Categoria === categoria).map((producto) => (
           <div className="producto" key={producto.Id}>
+            <div style={{position: 'absolute', top: '10px', left: '10px', color: 'blue'}}>{producto.Id}</div>
             <img src={producto.Img} alt={producto.Categoria} />
-            <p>{producto.Precio}€</p>
-            <button onClick={() => añadirAlCarrito(producto)}>Añadir al carrito</button>
+            <p className="price" style={{color: 'green'}}>{producto.Precio}€</p>
+            <div className='plusalcarrito'>
+              <button onClick={() => añadirAlCarrito(producto)}>Añadir al carrito</button>
+            </div>
           </div>
         ))}
       </div>
-      <div className="carrito">
+      <div style={{marginTop: '2em', marginBottom:'2em'}}  className="carrito">
         <Button onClick={() => setShowModal(true)}><FaShoppingCart style={{width: '25px', height: '25px'}} />Ver carrito ({carrito.length})</Button>
         <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}>
           <h2>Carrito</h2>
           {carrito.map((item) => (
             <div key={item.Id}>
               <p>{item.Categoria} - {item.cantidad}x - {item.Precio}€</p>
+              <FaMinus onClick={() => decrementarCantidad(item.Id)} />
+              <FaPlus onClick={() => incrementarCantidad(item.Id)} />
               <button onClick={() => eliminarDelCarrito(item.Id)}>Eliminar <FaTrashAlt /></button>
             </div>
           ))}
