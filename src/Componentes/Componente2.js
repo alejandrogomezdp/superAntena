@@ -1,22 +1,14 @@
 import React from 'react';
-import './Componente2.css';
 
-function Producto({ id, img, producto, resumen, precio }) {
-  return (
-    <><div className="producto-card">
-      <h2>
-      {producto}
-       (ID: {id})
-       </h2>
-      <div className=''>
-        <p>{img}</p>
-      <p>Resumen:Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s {resumen}</p>
-        <button className='botonComprar'>Compra</button>
-       <p>Precio: {precio}</p>
-      </div>
-    </div>
-    </>
-      );
+function Producto({ img, producto, resumen, precio }) {
+    return (
+        <div style={{ margin: '20px', border: '1px solid black', padding: '10px' }}>
+            <img src={img} alt={producto} style={{ width: '100px', height: '100px' }}/>
+            <h2>{producto}</h2>
+            <p>{resumen}</p>
+            <p>{precio}</p>
+        </div>
+    );
 }
 
-      export default Producto;
+export default Producto;
