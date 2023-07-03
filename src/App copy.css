@@ -33,4 +33,10 @@
 body{
     font-family: Yantramanav, sans-serif;
 }
+    .style-0 {
+        padding: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        box-sizing: border-box;
+    }
 

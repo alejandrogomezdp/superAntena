@@ -1,64 +1,75 @@
-const productosData = [
-    {
-        "Img": "https://www.superantena.es/2939-home_default/amplificador-de-mastil-nanokom-3e-1s-televes-561501.jpg",
-        "Ref": "TECE60C16U30",
-        "Resumen": "1LwPvnzvENhr2KszJNdX6ffwWiAEDCStSR",
-        "Precio": 25733
-    },
-    {
-        "Img": "https://www.superantena.es/2939-home_default/amplificador-de-mastil-nanokom-3e-1s-televes-561501.jpg",
-        "Ref": "Loremipsum", 
-        "Resumen": "1s8VTHERHd55puhImgYTh5nEQwvBLeVXrM",
-        "Precio": 63793
-    },
-    {
-        "Img": "url_de_la_imagen_3",
-        "Ref": "TECE60C10U30",
-        "Resumen": "1CwCKifawXoZ36ziva9nyHbK6nikeCVqPj",
-        "Precio": 68217
-    },
-    {
-        "Img": "url_de_la_imagen_4",
-        "Ref": "K100C2",
-        "Resumen": "1DqWbf23eoqjHMJ69vCnxBpuzVXBshsrYp",
-        "Precio": 75762
-    },
-    {
-        "Img": "url_de_la_imagen_5",
-        "Ref": "3065",
-        "Resumen": "1Ho4mtJ6R55ZoUcEjvmj6MRZjkZAImgPALj",
-        "Precio": 15382
-    },
-    {
-        "Img": "url_de_la_imagen_6",
-        "Ref": "0701126",
-        "Resumen": "1B9zJcX7H85FqB6aWj1ukwrEtFUFsWjLht",
-        "Precio": 44143
-    },
-    {
-        "Img": "url_de_la_imagen_7",
-        "Ref": "0701051 OS58",
-        "Resumen": "1Ahv6nf5iHf9ShW97vWfLzWYUJKjEvnsAn",
-        "Precio": 74018
-    },
-    {
-        "Img": "url_de_la_imagen_8",
-        "Ref": "7534",
-        "Resumen": "1GMhR1upd3Bn3EpvvxMyHjXPSTygdbLEPc",
-        "Precio": 47249
-    },
-    {
-        "Img": "url_de_la_imagen_9",
-        "Ref": "FlexShares US Quality Large Cap Index Fund",
-        "Resumen": "1pUNGeDXse7CBQP7AD7WjkAj9cz5Mpyr6",
-        "Precio": 1974
-    },
-    {
-        "Img": "url_de_la_imagen_10",
-        "Ref": "Norbord Inc.",
-        "Resumen": "1HDSZTuG3JSzCQr6H1gzC4Kwm8VcR3R5X3",
-        "Precio": 60297
-    },
-];
+const productos = [
 
-export default productosData;
+    {
+      "nombre": "Laptop Modelo 1",
+      "precio": 1200,
+      "precioSinIVA": 1000,
+      "fechaDeEntrega": "2023-07-10",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Smartphone Modelo 1",
+      "precio": 800,
+      "precioSinIVA": 666,
+      "fechaDeEntrega": "2023-07-11",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Tablet Modelo 1",
+      "precio": 500,
+      "precioSinIVA": 416,
+      "fechaDeEntrega": "2023-07-12",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Smartwatch Modelo 1",
+      "precio": 300,
+      "precioSinIVA": 250,
+      "fechaDeEntrega": "2023-07-13",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Auriculares Modelo 1",
+      "precio": 100,
+      "precioSinIVA": 83,
+      "fechaDeEntrega": "2023-07-14",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Camiseta Modelo 1",
+      "precio": 20,
+      "precioSinIVA": 16,
+      "fechaDeEntrega": "2023-07-15",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Pantalones Modelo 1",
+      "precio": 30,
+      "precioSinIVA": 25,
+      "fechaDeEntrega": "2023-07-16",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Zapatos Modelo 1",
+      "precio": 50,
+      "precioSinIVA": 42,
+      "fechaDeEntrega": "2023-07-17",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Gorra Modelo 1",
+      "precio": 10,
+      "precioSinIVA": 8,
+      "fechaDeEntrega": "2023-07-18",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    },
+    {
+      "nombre": "Chaqueta Modelo 1",
+      "precio": 60,
+      "precioSinIVA": 50,
+      "fechaDeEntrega": "2023-07-19",
+      "img": "https://www.ilumitec.es/imagenes/mini/marco-grafito-grafito-simon-82.jpg"
+    }
+  ]
+  
+  export default productos;
