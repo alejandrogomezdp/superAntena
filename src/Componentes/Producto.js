@@ -2,11 +2,14 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import "./Producto.css";
+import Slider from "./Slider";
 
 const Producto = ({ producto }) => {
   const { nombre, precio, fechaDeEntrega, precioSinIVA, img } = producto;
 
   return (
+    <>
+    <Slider />
     <div className="product-container">
       <div className="product-info">
         82812-32 <span className="product-item-count">1 elemento</span>
@@ -51,6 +54,7 @@ const Producto = ({ producto }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
